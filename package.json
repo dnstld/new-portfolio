@@ -1,6 +1,6 @@
 {
-  "name": "project-starter",
-  "description": "project starter with sass",
+  "name": "hommer-project",
+  "description": "personal website",
   "author": "denis toledo",
   "license": "ISC",
   "devDependencies": {
