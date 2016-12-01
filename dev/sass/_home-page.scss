@@ -6,95 +6,213 @@
 	background-color: #00aaff;
 	position: relative;
 
-	> .homer {
+	> .phrases {
 		display: flex;
 		justify-content: center;
-		width: 50vw;
-		height: 50vh;
-		position: fixed;
-		bottom: -50vw;
+		align-items: center;
+		padding: 1em;
+		font-size: 3.2rem;
 
-		> .head {
-			display: flex;
-			justify-content: center;
-			width: 90%;
-			height: 100%;
-			background-color: #f8a81d;
-			border: 3px solid black;
-			border-radius: 25vw;
-
-			&::before {
-				content: "";
-				display: block;
-				width: 90%;
-				height: 100%;
-				background-color: #f7e308;
-				border-radius: 20vw;
-			}
+		> h1 {
+			color: #fff;
+			text-align: center;
 		}
+	}
 
-		> .hear {
-			display: flex;
-			justify-content: center;
-			width: 100%;
-			height: 10vh;
-			position: absolute;
-			top: 20vh;
-
-			> span {
-				display: flex;
-				justify-content: center;
+	// homer
+	> .head-container {
+		position: fixed;
+		bottom: 0;
+		
+		> .head-outline {
+			width: 90%;
+			height: 700px;
+			border: .2em solid #000;
+			border-radius: 350px;
+			margin: 0 auto;
+			
+			@media(min-width: 1000px) {
+				border-width: 0.3em;
+			}
+			@media(min-width: 1500px) {
+				border-width: 0.4em;
+			}
+			
+			> .head-shadow {
 				width: 100%;
-				height: 100%;
-				border-radius: 2.5vh;
-				background-color: #f7e308;
-				border: 3px solid black;
-				position: absolute;
-				top: 0;
-				z-index: -1;
-
-				&:last-child {
-					z-index: 1;
-					border-style: none;
-					width: calc(100% - 4px);
-					background-color: #f8a81d;
-					position: absolute;
-					top: 3px;
-
-					&:before {
-						content: "";
-						width: 93%;
-						height: 100%;
-						background-color: #f7e308;
-						border-radius: 2.5vh;
-						position: absolute;
-						top: -1px;
-					}
+				background-color: $skinColor;
+				border-radius: 350px;
+				margin: 0 auto;
+				position: relative;
+				z-index: 2;
+				
+				> .head-color {
+					width: 85%;
+					height: 800px;
+					margin: inherit;
+					border-radius: 400px;
+					background-color: $skinShadow;
 				}
 			}
 		}
-
-		> .hair {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 18vw;
-			height: 18vw;
+		> .ear-outline {
+			width: 100%;
+			height: 10px;
 			position: absolute;
-			top: -6vw;
-			z-index: -1;
-
-			> span {
-				display: flex;
-				width: 100%;
-				height: 100%;
+			bottom: 0;
+			left: 0;
+			border-radius: 50px 50px 0 0;
+			border: 0.2em solid #000;
+			border-bottom: none;
+			background-color: $skinColor;
+			
+			@media(min-width: 500px) {
+				height: 15px;
+			}
+			@media(min-width: 700px) {
+				height: 20px;
+			}
+			@media(min-width: 1000px) {
+				height: 30px;
+				border-width: 0.3em;
+			}
+			@media(min-width: 1500px) {
+				height: 40px;
+				border-width: 0.4em;
+			}
+			
+			> .ear-color {
+				width: 90%;
+				height: 10px;
+				position: relative;
+				margin: 0 auto;
+				z-index: 3;
+				border-radius: 50px 50px 0 0;
+				background-color: $skinShadow;
+				
+				@media(min-width: 500px) {
+					height: 15px;
+				}
+				@media(min-width: 700px) {
+					height: 20px;
+				}
+				@media(min-width: 1000px) {
+					height: 30px;
+				}
+				@media(min-width: 1500px) {
+					height: 40px;
+				}
+			}
+		}
+		> .hair {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+			
+			> .hair-long {
+				width: 46px;
+				height: 46px;
 				border-radius: 50%;
-				border: 3px solid black;
-				position: absolute;
-
-				&:last-child {
-					width: 70%;
-					height: 70%;
+				position: relative;
+				top: -15px;
+				left: calc(50% - 23px);
+				border: 0.2em solid #000;
+				
+				@media(min-width: 500px) {
+					width: 50px;
+					height: 50px;
+					top: -20px;;
+					left: calc(50% - 25px);
+				}
+				
+				@media(min-width: 700px) {
+					width: 70px;
+					height: 70px;
+					top: -25px;;
+					left: calc(50% - 35px);
+				}
+				
+				@media(min-width: 900px) {
+					width: 80px;
+					height: 80px;
+					top: -27px;;
+					left: calc(50% - 40px);
+				}
+				
+				@media(min-width: 1000px) {
+					width: 100px;
+					height: 100px;
+					top: -35px;;
+					left: calc(50% - 50px);
+					border-width: 0.3em;
+				}
+				@media(min-width: 1300px) {
+					width: 120px;
+					height: 120px;
+					top: -40px;;
+					left: calc(50% - 60px);
+				}
+				@media(min-width: 1500px) {
+					width: 140px;
+					height: 140px;
+					top: -50px;;
+					left: calc(50% - 70px);
+					border-width: 0.4em;
+				}
+				@media(min-width: 1700px) {
+					width: 160px;
+					height: 160px;
+					top: -60px;;
+					left: calc(50% - 80px);
+				}
+				
+				> .hair-short {
+					width: 18px;
+					height: 18px;
+					border-radius: 50%;
+					position: relative;
+					top: 5px;
+					left: calc(50% - 9px);
+					z-index: 2;
+					border: 0.2em solid #000;
+					
+					@media(min-width: 500px) {
+						top: 8px;
+					}
+					@media(min-width: 700px) {
+						width: 30px;
+						height: 30px;
+						top: 11px;
+						left: calc(50% - 15px);
+					}
+					@media(min-width: 1000px) {
+						width: 50px;
+						height: 50px;
+						top: 13px;
+						left: calc(50% - 25px);
+						border-width: 0.3em;
+					}
+					@media(min-width: 1300px) {
+						width: 50px;
+						height: 50px;
+						top: 15px;
+						left: calc(50% - 25px);
+					}
+					@media(min-width: 1500px) {
+						width: 60px;
+						height: 60px;
+						top: 17px;
+						left: calc(50% - 30px);
+						border-width: 0.4em;
+					}
+					@media(min-width: 1700px) {
+						width: 70px;
+						height: 70px;
+						top: 20px;
+						left: calc(50% - 35px);
+					}
 				}
 			}
 		}
